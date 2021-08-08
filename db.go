@@ -29,6 +29,6 @@ func OpenConnection() (*sql.DB, error) {
 	if err != nil {
 		panic(err)
 	}
-
+	fmt.Printf("Database connected successfully.\n")
 	return db, nil
 }

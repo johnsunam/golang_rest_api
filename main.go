@@ -13,7 +13,6 @@ func main() {
 	db, err := OpenConnection()
 	if err != nil {
 		fmt.Printf("\n error %+v\n", err)
-
 	}
 	app := &App{
 		Router:   mux.NewRouter().StrictSlash(true),
@@ -23,6 +22,4 @@ func main() {
 	app.SetupRouter()
 
 	log.Fatal(http.ListenAndServe(":8080", app.Router))
-
-	fmt.Printf("\ndddppp %+v\n", app)
 }
